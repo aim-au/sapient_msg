@@ -1,6 +1,10 @@
+// Dstl (c) Crown Copyright 2024
+//
 // [START declaration]
 syntax = "proto3";
-package sapient_msg;
+package sapient_msg.bsi_flex_335_v2_0;
+
+import "sapient_msg/proto_options.proto";
 // [END declaration]
 
 // [START java_declaration]
@@ -12,7 +16,9 @@ option java_outer_classname = "RegistrationAckProto";
 
 // [START messages]
 message RegistrationAck {
-	bool acceptance = 1; // This value shall be 0 if the registration is rejected, or 1 if the registration is accepted
-	optional string ack_response_reason = 2; // This field can be used to communicate the reason for non-registration
+    reserved 2; // The ack_response_reason field has been made an array so that multiple reasons for rejection of the message can be specified
+	optional bool acceptance = 1 [(field_options) = {is_mandatory: true}]; // This value shall be 0 if the registration is rejected, or 1 if the registration is accepted
+//  optional string ack_response_reason = 2; // This field can be used to communicate the reason for non-registration
+    repeated string ack_response_reason = 3; // This field can be used to communicate the (operational) reason(s) for rejecting the Registration Message (one per array element)
 }
 // [END messages]

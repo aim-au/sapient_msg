@@ -10,12 +10,12 @@ import "sapient_msg/proto_options.proto";
 // [START java_declaration]
 option java_multiple_files = true;
 option java_package = "uk.gov.dstl.sapientmsg";
-option java_outer_classname = "AssociatedFileProto";
+option java_outer_classname = "FollowProto";
 // [END java_declaration]
 
 // [START messages]
-message AssociatedFile {
-    optional string type = 1 [(field_options) = {is_mandatory: true}]; // Type of file contained available at the URL
-    optional string url = 2 [(field_options) = {is_mandatory: true}]; // The network address of where the file can be accessed
+message FollowObject {
+        string follow_object_id = 1 [(field_options) = {is_mandatory: true}];// This field specifies the object_id (from the Detection Messages) of the object the mobile node should follow
 }
+
 // [END messages]

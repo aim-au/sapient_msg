@@ -1,8 +1,11 @@
+// Dstl (c) Crown Copyright 2024
+//
 // [START declaration]
 syntax = "proto3";
-package sapient_msg;
+package sapient_msg.bsi_flex_335_v2_0;
 
-import "sapient_msg/associated_file.proto";
+import "sapient_msg/bsi_flex_335_v2_0/associated_file.proto";
+import "sapient_msg/proto_options.proto";
 // [END declaration]
 
 // [START java_declaration]
@@ -14,10 +17,12 @@ option java_outer_classname = "TaskAckProto";
 
 // [START messages]
 message TaskAck {
-  string task_id = 1; // ULID of task that is being acknowledged
-  TaskStatus task_status = 2; // Status of the task (accepted or rejected)
-  optional string reason = 3; // Reason for the rejection if task is rejected or completed
+  reserved 3; // The reason field has been made an array so that multiple reasons for rejection can be specified
+  optional string task_id = 1 [(field_options) = {is_mandatory: true, is_ulid: true}]; // ULID of task that is being acknowledged
+  optional TaskStatus task_status = 2 [(field_options) = {is_mandatory: true}]; // Status of the task (accepted or rejected)
+//  optional string reason = 3; // Reason for the rejection if task is rejected or completed
   optional AssociatedFile associated_file = 4; // File associated with task being acknowledged
+  repeated string reason = 5; // Reason(s) for the rejection if task is rejected, completed, or failed
 
   enum TaskStatus {
     TASK_STATUS_UNSPECIFIED = 0; // Unset enum
