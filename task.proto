@@ -34,12 +34,12 @@ message Task {
     optional Command command = 8; // Command being requested as part the task
 
     enum Control {
-	reserved 4; // DEafult task has been removed as it is not possible to define
+	reserved 4; // Default task has been removed as it is not possible to define
         CONTROL_UNSPECIFIED = 0; // No control set
         CONTROL_START = 1; // Initialise/start the task
         CONTROL_STOP = 2; // Stop the task, remove the definition and revert to the previous task
         CONTROL_PAUSE = 3; // Stop the task, keep the definition for later use and revert to previous task
-        CONTROL_DEFAULT = 4; // Start/revert to the default task. Stop all other tasks
+//        CONTROL_DEFAULT = 4; // Start/revert to the default task. Stop all other tasks
     }
 
     message Command {
