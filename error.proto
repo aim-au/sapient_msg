@@ -9,7 +9,7 @@ import "sapient_msg/proto_options.proto";
 
 // [START java_declaration]
 option java_multiple_files = true;
-option java_package = "uk.gov.dstl.sapientmsg";
+option java_package = "uk.gov.dstl.sapientmsg.bsiflex335v2";
 option java_outer_classname = "ErrorProto";
 // [END java_declaration]
 
