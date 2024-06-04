@@ -19,6 +19,6 @@ message Error {
     reserved 2; // The error message field was changed to an array to allow an Error Message to report multiple errors in one go
     optional bytes packet = 1 [(field_options) = {is_mandatory: true}];  // Packet which caused the error
 //    optional string error_message = 2 [(field_options) = {is_mandatory: true}]; // Description of the error being reported
-    repeated string error_message = 3; // Description of the error being reported, this field is an array to allow multiple errors to be reported in one go
+    repeated string error_message = 3 [(field_options) = {is_mandatory: true}]; // Description of the error being reported, this field is an array to allow multiple errors to be reported in one go
 }
 // [END messages]
