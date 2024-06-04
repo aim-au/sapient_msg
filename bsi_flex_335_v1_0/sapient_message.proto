@@ -10,7 +10,7 @@ import "sapient_msg/bsi_flex_335_v1_0/alert.proto";
 import "sapient_msg/bsi_flex_335_v1_0/alert_ack.proto";
 import "sapient_msg/bsi_flex_335_v1_0/detection_report.proto";
 import "sapient_msg/bsi_flex_335_v1_0/error.proto";
-import "sapient_msg/bsi_flex_335_v1_0/proto_options.proto";
+import "sapient_msg/proto_options.proto";
 import "sapient_msg/bsi_flex_335_v1_0/registration.proto";
 import "sapient_msg/bsi_flex_335_v1_0/registration_ack.proto";
 import "sapient_msg/bsi_flex_335_v1_0/status_report.proto";
