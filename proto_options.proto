@@ -13,6 +13,10 @@ option java_package = "uk.gov.dstl.sapientmsg";
 option java_outer_classname = "ProtoOptionsProto";
 // [END java_declaration]
 
+// [START go_declaration]
+option go_package = "github.com/aim-au/sapient_msg_go";
+// [END go_declaration]
+
 // [START messages]
 message FileOptions {
     string standard_version = 1;

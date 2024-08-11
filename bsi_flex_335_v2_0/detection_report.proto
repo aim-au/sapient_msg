@@ -20,6 +20,11 @@ option java_package = "uk.gov.dstl.sapientmsg.bsiflex335v2";
 option java_outer_classname = "DetectionReportProto";
 // [END java_declaration]
 
+// [START go_declaration]
+option go_package = "github.com/aim-au/sapient_msg_go/bsi_flex_335_v2_0";
+// [END go_declaration]
+
+
 
 // [START messages]
 message DetectionReport {

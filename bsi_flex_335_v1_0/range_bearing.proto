@@ -11,6 +11,10 @@ option java_package = "uk.gov.dstl.sapientmsg.bsiflex335v1";
 option java_outer_classname = "RangeBearingProto";
 // [END java_declaration]
 
+// [START go_declaration]
+option go_package = "github.com/aim-au/sapient_msg_go/bsi_flex_335_v1_0";
+// [END go_declaration]
+
 // [START messages]        
 message RangeBearing {
     optional double elevation = 1; // Elevation in relation to node's horizon

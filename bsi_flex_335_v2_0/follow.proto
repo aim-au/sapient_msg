@@ -13,6 +13,11 @@ option java_package = "uk.gov.dstl.sapientmsg.bsiflex335v2";
 option java_outer_classname = "FollowProto";
 // [END java_declaration]
 
+// [START go_declaration]
+option go_package = "github.com/aim-au/sapient_msg_go/bsi_flex_335_v2_0";
+// [END go_declaration]
+
+
 // [START messages]
 message FollowObject {
         string follow_object_id = 1 [(field_options) = {is_mandatory: true}];// This field specifies the object_id (from the Detection Messages) of the object the mobile node should follow
